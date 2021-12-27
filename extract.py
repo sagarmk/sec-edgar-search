@@ -4,6 +4,7 @@ import time
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 
+
 class Extract:
     def __init__(self):
 
@@ -35,21 +36,18 @@ class Extract:
         for elem in elems:
             if elem:
                 if elem.get_attribute("href").endswith('.htm'):
-                    # try:
-                    print("ELEM ",elem)
+
+                    ### click the hyper link to get full url ###
                     elem.click()
-                    download_link = self.driver.find_element(By.XPATH, '/html/body/div[4]/div/div/div[3]/a').get_attribute(
+                    download_link = self.driver.find_element(By.XPATH,
+                                                             '/html/body/div[4]/div/div/div[3]/a').get_attribute(
                         "href")
-                    print(download_link)
+                    
                     if download_link:
                         if download_link.endswith('.htm'):
                             self.list_map[self.keyword].append(download_link)
                         self.driver.find_element(By.XPATH, '/html/body/div[4]/div/div/div[3]/button').click()
-                        time.sleep(3)
-                    # except Exception as ex:
-                    #     print(" Non clickable element found, skipping :: ",ex)
-                    #     pass
-
+                        time.sleep(5)
 
     def pagination_skip(self):
 
