@@ -1,4 +1,4 @@
-from extract import Extract
+from src.secpanda.extract import Extract
 
 if __name__ == "__main__":
 
