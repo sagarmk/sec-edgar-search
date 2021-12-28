@@ -1,9 +1,0 @@
-README.md
-pyproject.toml
-setup.py
-src/secpanda/__init__.py
-src/secpanda/extract.py
-src/secpanda_SAGAR_MK.egg-info/PKG-INFO
-src/secpanda_SAGAR_MK.egg-info/SOURCES.txt
-src/secpanda_SAGAR_MK.egg-info/dependency_links.txt
-src/secpanda_SAGAR_MK.egg-info/top_level.txt

@@ -6,7 +6,7 @@ from webdriver_manager.chrome import ChromeDriverManager
 
 
 class Extract:
-    def __init__(self):
+    def __init__(self, driver_path):
 
         self.keyword = None
         self.list_map = {}

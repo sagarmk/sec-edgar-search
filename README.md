@@ -6,3 +6,6 @@
 ####Installation: 
     - Install via pip
     - You can also use extract.py module independently
+
+    ##### Notes:
+        - linux will require libnss3 
