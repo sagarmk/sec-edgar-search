@@ -55,7 +55,7 @@ class Extract:
         # self.extract_links()
         for page in pagination:
             if page.text.isdigit():
-                #print(f"Extracting pages from Page No. {page.text}")
+                print(f"Extracting pages from Page No. {page.text}")
                 page.click()
                 time.sleep(5)
                 self.extract_links()
