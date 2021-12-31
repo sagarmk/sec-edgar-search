@@ -1,2 +1,4 @@
 selenium
 webdriver_manager
+chardet
+urllib3

@@ -42,7 +42,7 @@ class Extract:
                     download_link = self.driver.find_element(By.XPATH,
                                                              '/html/body/div[4]/div/div/div[3]/a').get_attribute(
                         "href")
-                    
+
                     if download_link:
                         if download_link.endswith('.htm'):
                             self.list_map[self.keyword].append(download_link)
@@ -55,7 +55,7 @@ class Extract:
         # self.extract_links()
         for page in pagination:
             if page.text.isdigit():
-                #print(f"Extracting pages from Page No. {page.text}")
+                # print(f"Extracting pages from Page No. {page.text}")
                 page.click()
                 time.sleep(5)
                 self.extract_links()
