@@ -1,7 +1,7 @@
 ### SEC Edgar Panda
 
-- Directly download with document type
-- If you are just looking for few samples, restrict usage to first page download
+- Directly download files from sec.gov based on document type
+
 #### Installation: 
     - python setup.py install
     
