@@ -13,10 +13,29 @@ Quickstart:
 
     ```
     from secpanda.extract import Extract
-    downloader = Extract()
-    downloader.search_keys("Employment Agreement")
-    links = downloader.extract_links()
-    # wget on links to download them
+
+    # sleep between extraction
+    sleep_time = 1
+
+    # default sleep time = 3
+    # default file limit = 10
+    downloader = Extract(sleep_time)
+    # printing extracted document links
+    print(downloader.search_and_extract('employment agreement'))
+
+    ```
+    ```
+    # extracting more than 10
+    limit = 100
+    sleep_time = 1
+
+    downloader = Extract(sleep_time)
+    downloader.search_keys('employment agreement')
+    downloader.extract_links(limit)
+    # printing extracted document links
+    print(downloader.get_list())
+    # close driver after extraction
+    downloader.exit_driver()
 
     ``` 
 

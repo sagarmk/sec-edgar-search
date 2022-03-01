@@ -1,6 +1,0 @@
-[build-system]
-requires = [
-    "webdriver-manager>=2.4",
-    "selenium>=3.141",
-]
-build-backend = "setuptools.build_meta"

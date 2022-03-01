@@ -1,10 +1,10 @@
-import setuptools
+from setuptools import setup, find_packages
 
 with open("README.md", "r") as fh:
     long_description = fh.read()
 
-setuptools.setup(
-    name="secpanda-SAGAR_MK",
+setup(
+    name="secpanda",
     version="0.0.1",
     author="Sagar Mk",
     author_email="sagarmk@github.com",
@@ -20,7 +20,8 @@ setuptools.setup(
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
     ],
-    package_dir={"": "src"},
-    packages=setuptools.find_packages(where="src"),
+    
+    packages=find_packages(include=['secpanda', 'secpanda.*']),
     python_requires=">=3.7",
 )
+
